@@ -7,7 +7,9 @@
 
 @font-face {
   font-family: "Circular Std Book";
-  src: url("fonts/CircularStdMedium.ttf") format("ttf");
+  src: url("fonts/CircularStdMedium.ttf") format("ttf"),
+  url('fonts/CircularStdMedium.ttf')  format('truetype'),
+  url('fonts/CircularStdMedium.ttf#CircularStdMedium') format('svg');
 }
 
 a {
