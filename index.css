@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Mont";
-  src: url("fonts/Mont-Regular.ttf") format("ttf");
+  src: url("fonts/Mont-Regular.ttf") format("ttf"),
+  url('fonts/Mont-Regular.ttf')  format('truetype'),
+  url('fonts/Mont-Regular.ttf#Mont-Regular') format('svg');
 }
 
 @font-face {
