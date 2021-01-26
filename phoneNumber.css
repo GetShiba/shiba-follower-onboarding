@@ -27,6 +27,7 @@
   width: 286px;
   height: 25px;
   border: none;
+  border-radius: 0px;
   border-bottom: 1px solid #7850EA;
   background-color: #f4f4f9;
   font-family: "Mont", sans-serif;
