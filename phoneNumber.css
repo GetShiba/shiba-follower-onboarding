@@ -1,0 +1,41 @@
+/* contact instructions */
+
+.contact-instructions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 210px 0 0 0;
+  padding: 25px 0 15px 0;
+}
+
+.contact-instructions {
+  color: rgba(12, 18, 80, 0.5);
+  text-align: center;
+  font-family: "Mont", "sans-serif";
+  font-size: 16px;
+  width: 286px;
+}
+
+.contact-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.phone-number-input {
+  width: 286px;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #7850EA;
+  background-color: #f4f4f9;
+  font-family: "Mont", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  /* padding: 5px 5px 5px 10px; */
+}
+
+.phone-number-input:focus {
+  outline-width: 0;
+}
+
