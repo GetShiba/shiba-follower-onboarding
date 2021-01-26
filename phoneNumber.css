@@ -1,5 +1,11 @@
 /* contact instructions */
 
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
 .contact-instructions-container {
   display: flex;
   justify-content: center;
@@ -27,7 +33,6 @@
   width: 286px;
   height: 25px;
   border: none;
-  border-radius: 0px;
   border-bottom: 1px solid #7850EA;
   background-color: #f4f4f9;
   font-family: "Mont", sans-serif;
