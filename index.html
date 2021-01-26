@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta name="shiba" content="Shiba Follower Onboarding" />
     <link rel="manifest" href="public/manifest.json" />
-    <link rel="stylesheet" href="index.css" media="all"/>
+    <link rel="stylesheet" href="index.css" media="all" />
     <title>Shiba Follower Onboarding</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -17,7 +17,9 @@
         <img class="bg" src="public/BG.svg" alt="bg" />
       </div>
       <div class="influencer-video-container">
-        <div class="influencer-video"></div>
+        <div class="influencer-video">
+          <img class="play" src="public/Play.svg" alt="verified" />
+        </div>
       </div>
       <div class="influencer-container">
         <div class="influencer">
@@ -43,7 +45,7 @@
               <span class="tier-card-title">Basic</span>
             </div>
             <div class="tier-card-primary-right">
-              <div class="tier-checkbox-box">
+              <div class="tier-checkbox-box" value="basic">
                 <img
                   class="tier-checkbox"
                   src="public/Checkbox_Unselected.svg"
@@ -82,7 +84,7 @@
               <span class="tier-card-title">VIP</span>
             </div>
             <div class="tier-card-primary-right">
-              <div class="tier-checkbox-box">
+              <div class="tier-checkbox-box" value="vip">
                 <img
                   class="tier-checkbox"
                   src="public/Checkbox_Unselected.svg"
@@ -104,7 +106,7 @@
         </div>
       </div>
       <div class="button-container">
-        <button class="checkout-button">Checkout</button>
+        <button id="checkout-button" class="checkout-button">Checkout</button>
       </div>
       <div class="page-progress-container">
         <img class="dots" src="public/Dots_page_one.svg" alt="dots page 1" />
@@ -112,19 +114,34 @@
       <div class="privacy-container">
         <div class="privacy-advertising">
           <span
-            >Shiba does not use your data for advertisingor marketing
+            >Shiba does not use your data for advertising or marketing
             purposes.</span
           >
         </div>
 
         <div class="privacy-links">
           <div class="privacy-link">
-            <a href="https://">Privacy Policy</a>
+            <a
+              href="https://app.termly.io/document/privacy-policy/f237d3c6-9860-4947-9bdc-7a08f4bf2034"
+              >Privacy Policy</a
+            >
           </div>
-          <div class="privacy-link">
+          <!-- <div class="privacy-link">
             <a href="https://">Terms of Service</a>
-          </div>
+          </div> -->
         </div>
+      </div>
+    </div>
+    <!-- Video modal -->
+    <div id="video-modal" class="modal">
+      <div class="modal-content">
+        <div class="close-box">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-content-video">
+          <span>Video</span>
+        </div>
+       
       </div>
     </div>
     <script src="index.js"></script>
