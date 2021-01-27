@@ -313,6 +313,13 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 200px;
+}
+
+.contact-input-container-oneScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80px;
 }
 
