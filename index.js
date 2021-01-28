@@ -116,7 +116,7 @@ $(function(){
   });
 
   $('#dots').click(() => {
-    animateRight($first, $second);
+    animateLeft($first, $second);
     var tmp = $first;
     $first = $second;
     $second = tmp;
