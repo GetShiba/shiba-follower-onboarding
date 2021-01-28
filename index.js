@@ -64,7 +64,7 @@ $("#checkout-button").click((e) => {
   }
 });
 
-// test 2
+// animation between page one & two
 function animateLeft($src, $tgt) {
   var $parent = $src.parent();
   var width = $parent.width();
@@ -106,7 +106,7 @@ $(function () {
     var tmp = $first;
     $first = $second;
     $second = tmp;
-    $('html, body').animate({scrollTop: '0px'}, 0);
+    $("html, body").animate({ scrollTop: "0px" }, 0);
   });
 
   $("#goback-button").click(function () {
@@ -114,6 +114,6 @@ $(function () {
     var tmp = $first;
     $first = $second;
     $second = tmp;
-    $('html, body').animate({scrollTop: '0px'}, 0);
+    $("html, body").animate({ scrollTop: "0px" }, 0);
   });
 });
