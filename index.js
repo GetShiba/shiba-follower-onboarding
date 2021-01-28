@@ -115,7 +115,7 @@ $(function(){
       $second = tmp;
   });
 
-  $('#dots').click(() => {
+  $('#dots').click(function() {
     animateLeft($first, $second);
     var tmp = $first;
     $first = $second;
