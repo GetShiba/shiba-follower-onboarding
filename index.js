@@ -51,74 +51,74 @@ $(".tier-card-view-perks").click((e) => {
 });
 
 $("#next-button").click((e) => {
-  window.location.href = 'phoneNumber.html';
-})
+  window.location.href = "phoneNumber.html";
+});
 
 // phone number screen
 $("#checkout-button").click((e) => {
   let phoneNumber = $("#phone-number-input").val();
   if (phoneNumber.length < 1) {
     if ($(".error-container > span").length < 1) {
-      $(".error-container").append(`<span>Please provide valid phone number</span>`)
+      $(".error-container").append(
+        `<span>Please provide valid phone number</span>`
+      );
     }
   } else {
     $(".error-container").empty();
   }
-})
-
-
+});
 
 // test 2
-function animateLeft($src, $tgt){
+function animateLeft($src, $tgt) {
   var $parent = $src.parent();
   var width = $parent.width();
   var srcWidth = $src.width();
 
-  $src.css({position: 'relative'});
-  $tgt.hide().appendTo($parent).css({left: width, position: 'relative'});
-  
-  $src.animate({left : -width}, 500, function(){
-      $src.hide();
-      $src.css({left: null, position: null});
+  $src.css({ position: "relative" });
+  $tgt.hide().appendTo($parent).css({ left: width, position: "relative" });
+
+  $src.animate({ left: -width }, 500, function () {
+    $src.hide();
+    $src.css({ left: null, position: null });
   });
-  $tgt.show().animate({left: 0}, 500, function(){
-      $tgt.css({left: null, position: null});
+  $tgt.show().animate({ left: 0 }, 500, function () {
+    $tgt.css({ left: null, position: null });
   });
 }
 
-function animateRight($src, $tgt){
+function animateRight($src, $tgt) {
   var $parent = $src.parent();
   var width = $parent.width();
   var srcWidth = $src.width();
 
-  $src.css({position: 'relative'});
-  $tgt.hide().appendTo($parent).css({left: width, position: 'relative'});
-  
-  $src.animate({right : -width}, 500, function(){
-      $src.hide();
-      $src.css({left: null, position: null});
+  $src.css({ position: "relative" });
+  $tgt.hide().appendTo($parent).css({ left: width, position: "relative" });
+
+  $src.animate({ right: -width }, 500, function () {
+    $src.hide();
+    $src.css({ left: null, position: null });
   });
-  $tgt.show().animate({left: 0}, 500, function(){
-      $tgt.css({left: null, position: null});
+  $tgt.show().animate({ left: 0 }, 500, function () {
+    $tgt.css({ left: null, position: null });
   });
 }
 
-$(function(){
+$(function () {
   var $first = $("#page-one-content");
   var $second = $("#page-two-content");
   $second.hide();
-  
-  $("#checkout-button").click(function(){
-      animateLeft($first, $second);
-      var tmp = $first;
-      $first = $second;
-      $second = tmp;
-  });
 
-  $('#dots').click(function() {
+  $("#checkout-button").click(function () {
     animateLeft($first, $second);
     var tmp = $first;
     $first = $second;
     $second = tmp;
-  })
-})
+  });
+
+  $("#dots").click(function () {
+    animateRight($first, $second);
+    var tmp = $first;
+    $first = $second;
+    $second = tmp;
+  });
+});
