@@ -73,11 +73,28 @@ function animateLeft($src, $tgt){
   var $parent = $src.parent();
   var width = $parent.width();
   var srcWidth = $src.width();
-  
+
   $src.css({position: 'relative'});
   $tgt.hide().appendTo($parent).css({left: width, position: 'relative'});
   
   $src.animate({left : -width}, 500, function(){
+      $src.hide();
+      $src.css({left: null, position: null});
+  });
+  $tgt.show().animate({left: 0}, 500, function(){
+      $tgt.css({left: null, position: null});
+  });
+}
+
+function animateRight($src, $tgt){
+  var $parent = $src.parent();
+  var width = $parent.width();
+  var srcWidth = $src.width();
+
+  $src.css({position: 'relative'});
+  $tgt.hide().appendTo($parent).css({left: width, position: 'relative'});
+  
+  $src.animate({right : -width}, 500, function(){
       $src.hide();
       $src.css({left: null, position: null});
   });
@@ -97,4 +114,11 @@ $(function(){
       $first = $second;
       $second = tmp;
   });
+
+  $('#dots').click(() => {
+    animateRight($first, $second);
+    var tmp = $first;
+    $first = $second;
+    $second = tmp;
+  })
 })
