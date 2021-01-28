@@ -106,6 +106,7 @@ $(function () {
     var tmp = $first;
     $first = $second;
     $second = tmp;
+    $('html, body').animate({scrollTop: '0px'}, 300);
   });
 
   $("#goback-button").click(function () {
@@ -113,5 +114,6 @@ $(function () {
     var tmp = $first;
     $first = $second;
     $second = tmp;
+    $('html, body').animate({scrollTop: '0px'}, 300);
   });
 });
