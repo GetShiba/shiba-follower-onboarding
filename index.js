@@ -65,3 +65,36 @@ $("#checkout-button").click((e) => {
     $(".error-container").empty();
   }
 })
+
+
+
+// test 2
+function animateLeft($src, $tgt){
+  var $parent = $src.parent();
+  var width = $parent.width();
+  var srcWidth = $src.width();
+  
+  $src.css({position: 'relative'});
+  $tgt.hide().appendTo($parent).css({left: width, position: 'relative'});
+  
+  $src.animate({left : -width}, 500, function(){
+      $src.hide();
+      $src.css({left: null, position: null});
+  });
+  $tgt.show().animate({left: 0}, 500, function(){
+      $tgt.css({left: null, position: null});
+  });
+}
+
+$(function(){
+  var $first = $("#page-one-content");
+  var $second = $("#page-two-content");
+  $second.hide();
+  
+  $("#checkout-button").click(function(){
+      animateLeft($first, $second);
+      var tmp = $first;
+      $first = $second;
+      $second = tmp;
+  });
+})

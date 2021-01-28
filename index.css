@@ -66,6 +66,22 @@ html,body {
   cursor: pointer;
 }
 
+/* page one */
+
+.page-one-content {
+  display:flex;
+  width: 100%;
+  flex-direction: column;
+}
+/* page two */
+
+.page-two-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+
 /* influencer container */
 
 .influencer-container {
@@ -297,7 +313,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 0 0;
+  margin: 200px 0 0 0;
   padding: 25px 0 15px 0;
 }
 
@@ -389,3 +405,5 @@ input {
   text-decoration: none;
   cursor: pointer;
 }
+
+
