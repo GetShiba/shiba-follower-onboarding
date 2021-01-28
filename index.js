@@ -50,10 +50,6 @@ $(".tier-card-view-perks").click((e) => {
   }
 });
 
-$("#next-button").click((e) => {
-  window.location.href = "phoneNumber.html";
-});
-
 // phone number screen
 $("#checkout-button").click((e) => {
   let phoneNumber = $("#phone-number-input").val();
@@ -91,9 +87,6 @@ function animateRight($src, $tgt) {
   var width = $parent.width();
   var srcWidth = $src.width();
 
-  $src.css({ position: "relative" });
-  $tgt.hide().appendTo($parent).css({ left: width, position: "relative" });
-
   $src.animate({ right: -width }, 500, function () {
     $src.hide();
     $src.css({ left: null, position: null });
@@ -108,14 +101,14 @@ $(function () {
   var $second = $("#page-two-content");
   $second.hide();
 
-  $("#checkout-button").click(function () {
+  $("#next-button").click(function () {
     animateLeft($first, $second);
     var tmp = $first;
     $first = $second;
     $second = tmp;
   });
 
-  $("#dots").click(function () {
+  $("#goback-button").click(function () {
     animateRight($first, $second);
     var tmp = $first;
     $first = $second;

@@ -243,6 +243,25 @@ html,body {
   cursor: pointer;
 }
 
+.goback-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 10px 0;
+  font-family: "Circular Std Book", "sans-serif";
+  font-size: 12px;
+  color: #979797;
+}
+
+.goback-button {
+  height: 52px;
+  border-radius: 30px;
+  background-color: #f4f4f9;
+  border: none;
+  font-family: "Circular Std Book", "sans-serif";
+  font-size: 12px;
+  cursor: pointer;
+}
+
 /* error */
 
 .error-container {
