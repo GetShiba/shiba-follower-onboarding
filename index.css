@@ -60,11 +60,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #979797;
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  cursor: pointer;
+  background-image: url(public/IMG_1791_Original.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* page one */
@@ -82,13 +84,50 @@ body {
   flex-direction: column;
 }
 
+/* intro-video-container */
+
+.intro-video-container {
+  display: flex;
+  justify-content: center;
+  margin: 195px 0 0 0;
+}
+
+.intro-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2px 0 2px 0;
+  cursor: pointer;
+}
+
+.intro-video-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mont", sans-serif;
+  color: #7850ea;
+  font-size: 12px;
+}
+
+.intro-video-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 5px;
+}
+
+.play {
+  height: 20px;
+}
+
 /* influencer container */
 
 .influencer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 210px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .influencer {
@@ -374,7 +413,7 @@ input {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
+  padding-top: 120px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */

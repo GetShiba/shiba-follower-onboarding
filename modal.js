@@ -4,7 +4,7 @@ var modal = document.getElementById("video-modal");
 var span = document.getElementsByClassName("close")[0];
 
 // open modal
-$(".influencer-video").click((e) => {
+$(".intro-video").click((e) => {
   modal.style.display = "block";
 })
 
